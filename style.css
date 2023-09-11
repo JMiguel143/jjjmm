@@ -1,0 +1,77 @@
+*{
+	margin: 0; 
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background: #e9e3e3;
+	font-family: 'Poppins', sans-serif;
+}
+.header{
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(360deg,rgba(0,0,0,0.9),transparent), url(img/1.jpg);
+	background-size: cover;
+}
+.header-text{
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+}
+.content h1{
+	font-size: 45px;	
+}
+.content p{	
+	margin:0px;	
+	font-size: 30px;
+  white-space:nowrap;
+  overflow:hidden;
+  animation:typing 4s steps(22,end) forwards,
+            blink 1s infinite alternate;
+}
+button{
+	text-decoration: none;
+	padding: 15px 35px;
+	margin-top: 50px;
+	border: 2px solid #009688;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 18px;
+	cursor: pointer;
+	background: transparent;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+}
+span{
+	background: #009688;
+	height: 100%;
+	width: 0%;
+	border-radius: 25px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+	transition: 0.5s;
+}
+button:hover span{
+	width: 100%;
+}
+button:hover{
+	border: none;
+}
+@keyframes typing{
+	0%{width: 0%;}
+	100%{width: 100%;}
+}
+@keyframes blink{
+	0%, 100%{
+		border-right: 2px solid transparent;
+	}
+	50%{
+		border-right: 2px solid #fff;
+	}
+}
